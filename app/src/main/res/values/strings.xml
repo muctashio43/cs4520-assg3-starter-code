@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">assignment3</string>
+    <string name="app_name">Assignment3</string>
+    <string name="mvp">MVP</string>
+    <string name="mvvm">MVVM</string>
+    <string name="hint_1">Enter Number 1</string>
+    <string name="hint_2">Enter Number 2</string>
+    <string name="add_str">Add</string>
+    <string name="sub_str">Subtract</string>
+    <string name="multiply_str">Multiply</string>
+    <string name="divide_str">Divide</string>
 </resources>
