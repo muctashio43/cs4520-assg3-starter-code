@@ -1,19 +1,20 @@
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.cs4520.assignment3.models.OperationResult
 
 class CalculatorViewModel : ViewModel() {
-    private val _field1 = MutableLiveData<Int?>()
+    private val _field1 = MutableLiveData<Int?>(null)
     val field1: LiveData<Int?> = _field1
 
-    private val _field2 = MutableLiveData<Int?>()
+    private val _field2 = MutableLiveData<Int?>(null)
     val field2: LiveData<Int?> = _field2
 
-    private val _result = MutableLiveData<Double?>()
+    private val _result = MutableLiveData<Double?>(null)
     val result: LiveData<Double?> = _result
 
-    private val _error = MutableLiveData<String>()
+    private val _error = MutableLiveData<String>("")
     val error: LiveData<String> = _error
 
     fun setField1(field: String) {

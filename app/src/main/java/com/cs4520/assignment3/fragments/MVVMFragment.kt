@@ -96,8 +96,13 @@ class MVVMFragment : Fragment() {
             binding.result.text = (if (n == null) "" else "Result: " + n.toString())
         })
 
+        // Used as a way to avoid the toast from rerunning when rotating screen.
+        var has_run_error_init = false;
         viewModel.error.observe(viewLifecycleOwner, Observer { err ->
-            Toast.makeText(context, err, Toast.LENGTH_LONG).show()
+            if (has_run_error_init) {
+                Toast.makeText(context, err, Toast.LENGTH_LONG).show()
+            }
+            has_run_error_init = true;
         })
     }
 
